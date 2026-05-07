@@ -1,21 +1,44 @@
-# AI Image Generator - DALL-E & Stable Diffusion
+# AI Image Generator — DALL-E & Stable Diffusion
 
-Multi-model text-to-image platform with DALL-E 3 and Stable Diffusion XL.
+> Multi-model text-to-image generation platform supporting DALL-E 3 and Stable Diffusion XL with upscaling, gallery, and batch generation.
 
-## Features
-- 🎨 DALL-E 3 + Stable Diffusion XL generation
-- 🔍 Prompt enhancement and templates
-- 🖼️ Gallery with community sharing
-- ⬆️ Image upscaling
-- 📦 Batch generation
-- ☁️ S3 storage
+## 🚀 Overview
 
-## Tech Stack
-- Python, Flask, OpenAI API, Stability AI, Redis, Celery, S3
+A text-to-image generation platform that supports multiple AI models (OpenAI DALL-E 3 and Stability AI's Stable Diffusion XL). Features include prompt engineering templates, image upscaling, a community gallery, and batch generation — all served via a Flask REST API with S3 storage.
 
-## Getting Started
+## ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| 🎨 DALL-E 3 | OpenAI's latest image model |
+| 🖼️ Stable Diffusion XL | Open-source alternative |
+| ⬆️ Image Upscaling | 2x/4x resolution enhancement |
+| 📦 Batch Generation | Generate multiple images at once |
+| 🖌️ Prompt Templates | Pre-built prompt starters |
+| 🏛️ Gallery | Community sharing + browsing |
+| ☁️ S3 Storage | Persistent image storage |
+| 🔧 Style Control | Vivid/natural style selection |
+
+## 🛠️ Tech Stack
+
+| Component | Technology |
+|-----------|-----------|
+| API | Python, Flask |
+| AI Models | OpenAI (DALL-E 3), Stability AI (SDXL) |
+| Storage | AWS S3 |
+| Queue | Celery + Redis |
+| Frontend | React |
+
+## ⚡ Quick Start
+
 ```bash
-pip install -r requirements.txt && cp .env.example .env && python src/api/app.py
+cd src && pip install -r ../requirements.txt
+cp ../.env.example ../.env
+python api/app.py
 ```
-## License
+
+API at `http://localhost:5000` | Endpoints: POST `/api/generate`, POST `/api/upscale`, GET `/api/gallery`
+
+## 📄 License
+
 MIT
